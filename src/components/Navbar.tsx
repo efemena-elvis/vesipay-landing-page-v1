@@ -1,14 +1,7 @@
 
 import React, { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,27 +22,8 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[400px]">
-                      <div className="p-4 hover:bg-slate-50 rounded-lg">
-                        <h4 className="text-sm font-semibold mb-1">For Businesses</h4>
-                        <p className="text-sm text-gray-500">Setup and manage cross-border payments for your business</p>
-                      </div>
-                      <div className="p-4 hover:bg-slate-50 rounded-lg">
-                        <h4 className="text-sm font-semibold mb-1">For Individuals</h4>
-                        <p className="text-sm text-gray-500">Send money to friends and family worldwide</p>
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <a href="#features" className="text-gray-700 hover:text-vesipay-600 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-gray-700 hover:text-vesipay-600 transition-colors">How it Works</a>
+            <a href="#business" className="text-gray-700 hover:text-vesipay-600 transition-colors">For Business</a>
+            <a href="#individual" className="text-gray-700 hover:text-vesipay-600 transition-colors">For Individual</a>
             <a href="#contact" className="text-gray-700 hover:text-vesipay-600 transition-colors">Contact</a>
             <Button className="bg-vesipay-600 hover:bg-vesipay-700 text-white">Get Started</Button>
           </div>
@@ -70,15 +44,8 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-2 border-t border-gray-200 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <div className="py-2">
-                <div className="font-medium mb-2">Products</div>
-                <div className="pl-4 space-y-2">
-                  <a href="#business" className="block text-gray-600 hover:text-vesipay-600">For Businesses</a>
-                  <a href="#individual" className="block text-gray-600 hover:text-vesipay-600">For Individuals</a>
-                </div>
-              </div>
-              <a href="#features" className="text-gray-700 hover:text-vesipay-600 py-2 transition-colors" onClick={toggleMenu}>Features</a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-vesipay-600 py-2 transition-colors" onClick={toggleMenu}>How it Works</a>
+              <a href="#business" className="text-gray-700 hover:text-vesipay-600 py-2 transition-colors" onClick={toggleMenu}>For Business</a>
+              <a href="#individual" className="text-gray-700 hover:text-vesipay-600 py-2 transition-colors" onClick={toggleMenu}>For Individual</a>
               <a href="#contact" className="text-gray-700 hover:text-vesipay-600 py-2 transition-colors" onClick={toggleMenu}>Contact</a>
               <Button className="bg-vesipay-600 hover:bg-vesipay-700 text-white w-full">Get Started</Button>
             </div>
