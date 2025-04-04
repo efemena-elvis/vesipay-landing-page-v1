@@ -1,7 +1,7 @@
-
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import vesipayLogo from "@/assets/vesipayLogo.png"; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,10 +13,11 @@ const Navbar = () => {
   return (
     <nav className="bg-white py-4 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-vesipay-700">Vesi<span className="text-accent">pay</span></span>
+        <div className="flex justify-between items-center h-[60px] ">
+
+           <div className="flex items-center  mr-auto mb-16">
+            <a href="/" className="">
+              <img src={vesipayLogo} alt="Vesipay Logo" className="w-64" /> {/* Adjust logo size */}
             </a>
           </div>
 
@@ -55,5 +56,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;
+export default Navbar

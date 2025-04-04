@@ -19,7 +19,7 @@ const HeroSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Business Card */}
-          <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 relative overflow-hidden">
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 relative overflow-hidden">
             <div className="mb-4">
               <Building2 className="h-8 w-8 text-vesipay-600" />
             </div>
@@ -40,7 +40,7 @@ const HeroSection = () => {
           </div>
 
           {/* Individual Card */}
-          <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 relative overflow-hidden">
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 relative overflow-hidden">
             <div className="mb-4">
               <User className="h-8 w-8 text-vesipay-600" />
             </div>
